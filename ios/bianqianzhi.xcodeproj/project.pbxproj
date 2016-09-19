@@ -619,6 +619,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+                PRODUCT_BUNDLE_IDENTIFIER = 'io.plab.bianqianzhi';
 				PRODUCT_NAME = bianqianzhi;
 			};
 			name = Debug;
@@ -639,6 +640,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+                PRODUCT_BUNDLE_IDENTIFIER = 'io.plab.bianqianzhi';
 				PRODUCT_NAME = bianqianzhi;
 			};
 			name = Release;
@@ -660,6 +662,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+                CODE_SIGN_IDENTITY = "iPhone Developer: Pierre Tomasina (5PACJHXK8Q)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -686,8 +689,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-                PRODUCT_BUNDLE_IDENTIFIER = 'bianqianzhi';
-                PROVISIONING_PROFILE = "$(PROFILE_UDID)";
+                PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -708,6 +710,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+                CODE_SIGN_IDENTITY = "iPhone Developer: Pierre Tomasina (5PACJHXK8Q)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -728,8 +731,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
-                PRODUCT_BUNDLE_IDENTIFIER = 'bianqianzhi';
-                PROVISIONING_PROFILE = "$(PROFILE_UDID)";
+                PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
