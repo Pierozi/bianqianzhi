@@ -1,0 +1,45 @@
+---
+format_version: 1.2.0
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+app:
+  envs:
+  - opts:
+      is_expand: false
+    BITRISE_PROJECT_PATH: ios/bianqianzhi.xcodeproj
+  - opts:
+      is_expand: false
+    BITRISE_SCHEME: bianqianzhi
+trigger_map:
+- workflow: primary
+  pattern: "master"
+  is_pull_request_allowed: true
+workflows:
+  primary:
+    steps:
+    - activate-ssh-key@3.1.1: {}
+    - git-clone@3.3.4: {}
+    - script:
+        title: Install React Native CLI
+        inputs:
+        - content: npm install -g react-native-cli
+    - script:
+        title: npm install
+        inputs:
+        - content: npm install
+    - script:
+        title: Bundle app
+        deps:
+          brew:
+          - name: watchman
+          - name: flow
+        inputs:
+        - content: react-native bundle --entry-file ./index.ios.js --platform ios
+            --bundle-output ios/main.jsbundle
+    - certificate-and-profile-installer@1.7.0: {}
+    - xcode-archive@1.9.1: {}
+    - deploy-to-bitrise-io@1.2.5:
+         inputs:
+         - is_enable_public_page: 'false'
+    before_run: 
+    after_run: 
+
