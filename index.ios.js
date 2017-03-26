@@ -1,8 +1,14 @@
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ * @flow
+ */
+
 import React, { Component } from 'react';
 import {
-    AppRegistry,
+    AppRegistry
 } from 'react-native';
 
-import App from './Component/App'
+import bianqianzhi from './Components/App';
 
-AppRegistry.registerComponent('bianqianzhi', () => App);
+AppRegistry.registerComponent('bianqianzhi', () => bianqianzhi);

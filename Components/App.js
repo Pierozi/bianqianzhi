@@ -17,22 +17,20 @@ const styles = StyleSheet.create({
     },
 });
 
-class bianqianzhi extends Component {
+export default class bianqianzhi extends Component {
     render() {
         return (
             <Carousel animate={false} width={375}>
                 <View style={styles.container}>
-                    <Text>My First Card</Text>
+                    <Text>Flash Card　一</Text>
                 </View>
                 <View style={styles.container}>
-                    <Text>My Second Card</Text>
+                    <Text>Flash Card 二</Text>
                 </View>
                 <View style={styles.container}>
-                    <Text>My Third Card</Text>
+                    <Text>Flash Card 三</Text>
                 </View>
             </Carousel>
         )
     }
 }
-
-export default bianqianzhi
